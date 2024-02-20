@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;800&display=swap');
+
+:root{
+    --orange: #e38528;
+    --light-purple: #d9abff;
+    --purple: #b56eef;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all .2s linear;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+body{
+    height: 300rem;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1000;
+    width: 100%;
+    background: #fff;
+    padding: 2rem 5%;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .navbar a{
+    font-size: 1.7rem;
+    margin-left: 2rem;
+    color: #444;
+}
+
+header .navbar a:hover{
+    letter-spacing: .2rem;
+    color: var(--purple);
+}
+
+/*download cv button*/
+.btn{
+    display: inline-block;
+    border-radius: 5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    padding: .7rem 3rem;
+    background: var(--purple);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover{
+    background: #111;
+    letter-spacing: .2rem;
+}
+
+
+/*menu bars*/
+#menu{
+    font-size: 3rem;
+    color: #444;
+    cursor: pointer;
+    display: none;
+}
+
+/*sections*/
+section{
+    min-height: 100vh;
+    padding: 0 9%;
+    padding-top: 7.5rem;
+    padding-bottom: 3rem;
+}
+
+/*home section*/
+.home{
+    display: flex;
+    align-items: center;
+    background-image: url(images/homebg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    padding-left: 1rem;
+}
+
+.home .content .hello{
+    font-size: 3rem;
+    color: #444;
+}
+
+.home .content .name{
+    color: #444;
+    font-size: 5rem;
+}
+
+.home .content .name span{
+    color: #444;
+    font-size: 5rem;
+    font-weight: bolder;
+    color: var(--purple);
+}
+
+.home .content p{
+    max-width: 60rem;
+    font-size: 1.7rem;
+    color: #444;
+    padding-bottom: 1rem;
+}
+
+/*graduation photo*/
+.photo{
+    padding: 0;
+    width: 40%;
+    height: 30%;
+    float: right;
+}
+
+.photo img{
+    height: 60%;
+    width: 100%;
+    float: right;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+/*about section*/
+.heading{
+    text-align: center;
+    padding: 1rem;
+    color: #fff;
+    font-size: 5rem;
+    color: var(--purple);
+    text-shadow: 0 .3rem .5re, rgba(0,0,0,.1);
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+}
+
+.heading span{
+    color: #444;
+    text-transform: uppercase;
+    font-size: 5rem;
+}
+
+/*about section*/
+.about{
+    border: 2px solid blue;
+}
+
+.about .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about .about-col-1{
+    flex-basis: 35%;
+}
+
+.about .about-col-1 img{
+    width: 100%;
+    border: 0.6rem solid var(--light-purple);
+}
+
+.about .about-col-2{
+    flex-basis: 60%;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+/* Container for skill bars */
+.progress-container {
+    width: 100%; /* Full width */
+    background-color: #ddd; /* Grey background */
+}
+  
+.progress-bar {
+    text-align: right; /* Right-align text */
+    padding-top: 10px; /* Add top padding */
+    padding-bottom: 10px; /* Add bottom padding */
+    color: white; /* White text color */
+}
+  
+.row-2 .skills .progress-container:nth-child(1) .bar span{
+    width: 80%;
+}
+
+.row-2 .skills .progress-container:nth-child(2) .bar span{
+    width: 50%;
+}
+
+.row-2 .skills .progress-container:nth-child(3) .bar span{
+    width: 75%;
+}
+
+.row-2 .skills .progress-container:nth-child(4) .bar span{
+    width: 50%;
+}
+
+
+/*education and experience section*/
+.education{
+    border: 2px solid green;
+}
+
+.education .row{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid orange;
+}
+
+.education .row .education-col{
+    flex: 1 1 40rem;
+    margin: 1rem;
+    padding: 2rem;
+    border: .1rem solid rgba(0,0,0,.2);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+}
+
+.education .row .education-col .title{
+    color: var(--purple);
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.education .row .education-col .box{
+    padding-left: 2.5rem;
+    background-position: 2rem;
+    border-left: .2rem solid var(--purple);
+    position: relative;
+}
+
+.education .row .education-col .box:before{
+    content: '';
+    position: absolute;
+    top: .1rem; left: -1.1rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: var(--light-purple);
+}
+
+.education .row .education-col .box .year{
+    font-size: 1.5rem;
+    color: var(--orange);
+    padding-bottom: .5rem;
+}
+
+.education .row .education-col .box .year i{
+    padding-right: .5rem;
+}
+
+.education .row .education-col .box h3{
+    color: #444;
+    font-size: 2rem;
+}
+
+.education .row .education-col .box p{
+    color: #444;
+    font-size: 1.5rem;
+    padding-top: .5rem;
+}
+
+/*portfolio section*/
+.portfolio .box-container{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+ 
+.portfolio .box-container .box{
+    flex: 1 1 30rem;
+    height: 25rem;
+    position: relative;
+    overflow: hidden;
+    border: 1rem solid #fff;
+    box-shadow: 0 .5rem 1rem egba(0,0,0,.1);
+    background: #fff;
+    border-radius: .5rem;
+}
+
+.portfolio .box-container .box img{
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.portfolio .box-container .box:hover img{
+    height: 75%;
+    width: 75%;
+}
+
+.portfolio .box-container .box h3{
+    position: absolute;
+    bottom: .5rem;
+    left: 1rem;
+    font-size: 2.5rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.portfolio .box-container .box .icons{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.portfolio .box-container .box .icons a{
+    display: block;
+    height: 4rem;
+    width: 4rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: #333;
+    font-size: 1.7rem;
+    line-height: 4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.portfolio .box-container .box .icons a:hover{
+    background: var(--purple);
+    color: #fff;
+}
+
+
+/*contact section*/
+
+/*footer*/
+.footer{
+    background: #f9f9f9;
+    color: #444;
+    padding: 2.5rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.footer a{
+    color: var(--purple);
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+/*media queries*/
+@media (max-width:1300px){
+    
+    /*entire page size*/
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width:991px){
+    section{
+        padding: 0 3%;
+        padding-top: 7.5rem;
+        padding-bottom: 3rem;
+    }
+}
+
+@media (max-width:768px){
+    
+    /*menu bars*/
+    #menu{
+        display: block;
+    }
+
+    /*header and navbar*/
+    header .navbar{
+        position: absolute;
+        top: 100%; left: -100%;
+        background: #fff;
+        height: calc(100vh - 100%);
+        padding: 2rem;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        width: 50%;
+    }
+
+    header .navbar.nav-toggle{
+        left: 0%;
+        box-shadow: 0 100vh 0 100vh rgba(0,0,0,.1);
+    }
+    
+    header .navbar a{
+        font-size: 2rem;
+        display: block;
+        margin: 1.5rem 0;
+        text-align: center;
+    }
+
+    /*menu bars open/close transition*/
+    .fa-times{
+        transform: rotate(180deg);
+    }
+
+    .home{
+        background-position: left;
+    }
+
+    .home .content .name{
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width:450px){
+    
+    /*entire page size*/
+    html{
+        font-size: 50%;
+    }
+
+    header .navbar{
+        width: 70%;
+    }
+}
